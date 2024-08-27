@@ -5,7 +5,8 @@ MAINTAINER shaulliv
 USER root
 RUN mkdir /opt/tomcat
 RUN apk add --no-cache tzdata
-RUN wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.78/bin/apache-tomcat-9.0.78.tar.gz -P /tmp
+RUN tcatver=$(curl https://dlcdn.apache.org/tomcat/tomcat-9/ | grep -m 1 -o 9.0.* | head -c 6)
+RUN wget https://dlcdn.apache.org/tomcat/tomcat-9/v"$tcatver"/bin/apache-tomcat-"$tcatver".tar.gz -P /tmp
 
 ENV CATALINA_HOME /opt/tomcat
 ENV CATALINA_BASE /opt/tomcat

@@ -9,11 +9,10 @@ before every run of tomcat the script makes sure the the directory structure is 
 -e TZ=Etc/Universal - Timezone<br>
 -v /opt/tomcat - the location where tomcat is installed<br>
 
-#### How to change Java or tomcat versions
+#### How to change Java versions
 To build an image with different versions of Java or Tomcat change the following parameters in the **Dockerfile:**<br>
 `FROM amazoncorretto:8-alpine3.15-jdk` can be changed to any `JDK` image in the list [here](https://hub.docker.com/_/amazoncorretto) that is based on alpine (`JRE` and full images also might work).
 
-`RUN wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.78/bin/apache-tomcat-9.0.78.tar.gz -P /tmp` the tomcat file can be changed to any `tar.gz` file containing romcat available [here](https://dlcdn.apache.org/tomcat/), this usually is under the `bin` directory of any specific version.
 ## Usage
 ### Building the image
 The image needs to be built it is **not** deployed to dockerhub.

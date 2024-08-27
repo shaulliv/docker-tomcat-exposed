@@ -5,7 +5,9 @@ MAINTAINER shaulliv
 USER root
 RUN mkdir /opt/tomcat
 RUN apk add --no-cache tzdata
-RUN apk add --no-cache curl grep head
+RUN apk add --no-cache curl
+RUN apk add --no-cache grep
+RUN apk add --no-cache head
 RUN tcatver=$(curl https://dlcdn.apache.org/tomcat/tomcat-9/ | grep -m 1 -o 9.0.* | head -c 6)
 RUN wget https://dlcdn.apache.org/tomcat/tomcat-9/v"$tcatver"/bin/apache-tomcat-"$tcatver".tar.gz -P /tmp
 

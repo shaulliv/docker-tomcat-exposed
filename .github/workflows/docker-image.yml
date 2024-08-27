@@ -2,9 +2,9 @@ name: docker-tomcat-exposed
 
 on:
   push:
-    branches: [ "main" ]
+    branches: none #[ "main" ]
   pull_request:
-    branches: [ "main" ]
+    branches: none #[ "main" ]
   workflow_dispatch:
 
 jobs:

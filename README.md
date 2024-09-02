@@ -1,5 +1,5 @@
 # docker-tomcat-exposed
-An Docker image the is designed to expose all of the Tomcat file structure to the host OS
+A Docker image the is designed to expose all of the Tomcat file structure to the host OS
 ### Image info
 The image is designed to expose the entire tomcat folder structure for development purposes running under root user.<br>
 After deploying the image the tomcat_init script will run and either deploy version 9.0.78 of tomcat if the directory is empty or run tomcat.

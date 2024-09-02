@@ -41,5 +41,5 @@ then
 	 /bin/sh /opt/tomcat/bin/catalina.sh run
 	fi
 else
-	echo "/opt/tomcat not found or another problem occured"
+	echo "/opt/tomcat Not found or another problem occured"
 fi

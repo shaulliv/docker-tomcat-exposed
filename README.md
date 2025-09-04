@@ -38,7 +38,7 @@ docker run -d \
 ```yaml
 version: "2.1"
 services:
-  emby:
+  tomcat:
     image: tomcat-exposed:latest
     container_name: tomcat
     environment:
